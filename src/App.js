@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import BearList from "./BearList";
 
 function App() {
+
+    const [value, setValue] = useState(1)
+
+    function prev() {
+        setValue(value -1)
+    }
+
+    function next() {
+        setValue(value + 1)
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <button onClick={prev}>Prev</button>
+        <button onClick={next}>Next</button>
+
+      <BearList value={value}/>
     </div>
   );
 }
