@@ -5,15 +5,10 @@ import BearList from "./BearList";
 
 function App() {
 
-    const [value, setValue] = useState(3)
+    const [value, setValue] = useState(1)
 
-    function prev() {
-        setValue(value -1)
-    }
-
-    function next() {
-        setValue(value + 1)
-    }
+    const prev = () => { setValue(value - 1) }
+    const next = () => { setValue(value + 1) }
 
   return (
     <div className="App">
