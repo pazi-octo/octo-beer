@@ -5,7 +5,7 @@ import BearList from "./BearList";
 
 function App() {
 
-    const [value, setValue] = useState(1)
+    const [value, setValue] = useState(3)
 
     function prev() {
         setValue(value -1)
